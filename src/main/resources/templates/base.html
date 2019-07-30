@@ -75,36 +75,6 @@
                     <a href="#" class="dropdown-item disabled">View by Subjects</a>
                 </div>
             </li>
-
-<!--            <li sec:authorize="isAuthenticated()" class="nav-item dropdown">-->
-<!--                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">-->
-<!--                    User Action-->
-
-<!--                    <div class="dropdown-menu">-->
-<!--                        <a href="/afterlogin" class="dropdown-item">List Subjects and Courses</a>-->
-<!--                        <a href="/addsubject" class="dropdown-item">Add a Subject</a>-->
-<!--                        <a href="/add" class="dropdown-item">Add a Course</a>-->
-<!--                        <a href="/logout" class="dropdown-item">Logout</a>-->
-<!--                    </div>-->
-
-<!--                </a>-->
-<!--            </li>-->
-
-            <!--        <div sec:authorize="isAuthenticated()">-->
-            <!--            <li class="nav-item">-->
-            <!--                <a class="nav-link" href="/afterlogin">List Subjects and Courses</a>-->
-            <!--            </li>-->
-            <!--            <li class="nav-item">-->
-            <!--                <a class="nav-link" href="/addsubject">Add A Subject</a>-->
-            <!--            </li>-->
-            <!--            <li class="nav-item">-->
-            <!--                <a class="nav-link" href="/add">Add A Course</a>-->
-            <!--            </li>-->
-            <!--            <li class="nav-item">-->
-            <!--                <a class="nav-link" href="/logout">Logout</a>-->
-            <!--            </li>-->
-            <!--        </div>-->
-
             <!-- show based on principal's authorization -->
             <li sec:authorize="hasAuthority('ADMIN')" class="nav-item">
                 <a class="nav-link" href="/add">Add Course</a>

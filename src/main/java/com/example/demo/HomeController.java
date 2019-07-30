@@ -71,17 +71,6 @@ public class HomeController {
         return "redirect:/";
     }
 
-
-//    @RequestMapping("/secure")
-//    public String secure(Principal principal, Model model){
-//        User myuser =
-//                (
-//                    (CustomUserDetails) ((UsernamePasswordAuthenticationToken) principal).getPrincipal()
-//                ).getUser();
-//        model.addAttribute("myuser", myuser);
-//        return "secure";
-//    }
-
     /* Addition for separate log out page */
     @RequestMapping("/logoutconfirm")
     public String logoutconfirm(){

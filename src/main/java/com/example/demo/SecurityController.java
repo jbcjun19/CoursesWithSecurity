@@ -18,7 +18,7 @@ public class SecurityController {
     private UserService userService;
 
     @GetMapping("/register")
-    public String showRegistrationPage(Model model){
+    public String showRegistrationPage(Model model) {
         model.addAttribute("user", new User());
         return "registration";
     }
@@ -27,12 +27,11 @@ public class SecurityController {
     public String processRegistrationPage(@Valid
                                           @ModelAttribute("user") User user,
                                           BindingResult result,
-                                          Model model){
+                                          Model model) {
         model.addAttribute("user", user);
-        if (result.hasErrors()){
+        if (result.hasErrors()) {
             return "registration";
-        }
-        else {
+        } else {
             userService.saveUser(user);
             model.addAttribute("message", "User Account Created");
         }
@@ -40,7 +39,7 @@ public class SecurityController {
     }
 
     @RequestMapping("/login")
-    public String login(){
+    public String login() {
         return "login";
     }
 
@@ -49,13 +48,7 @@ public class SecurityController {
      * https://www.baeldung.com/get-user-in-spring-security */
     @GetMapping("/username")
     @ResponseBody
-    public String currentUsername(Principal principal){
+    public String currentUsername(Principal principal) {
         return principal.getName();
     }
-//    @GetMapping("/username")
-//    @ResponseBody
-//    public String currentUsernameSimple(HttpServletRequest request){
-//        Principal principal = request.getUserPrincipal();
-//        return principal.getName();
-//    }
 }
